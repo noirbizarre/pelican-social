@@ -6,7 +6,7 @@ Social plugin for Pelican
 
 Social directives for `Pelican`_ static blog generator.
 
-Allows you to easily link to social networks content through simple inline directives.
+Easy linking to social networks content through simple inline directives.
 
 Compatibility
 -------------

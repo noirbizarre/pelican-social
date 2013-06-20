@@ -1,5 +1,5 @@
 __version__ = '0.1.dev'
-__description__ = 'Social markups for Pelican Blog Generator'
+__description__ = 'Social directives for Pelican Blog Generator'
 
 
 def register():
