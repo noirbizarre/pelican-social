@@ -4,8 +4,16 @@ Social plugin for Pelican
 .. image:: https://secure.travis-ci.org/noirbizarre/pelican-social.png
    :target: http://travis-ci.org/noirbizarre/pelican-social
 
-Social markups support for `Pelican`_ static blog generator.
-Allows you to easily link to social networks content through simple inline diretives.
+Social directives for `Pelican`_ static blog generator.
+
+Allows you to easily link to social networks content through simple inline directives.
+
+Compatibility
+-------------
+
+pelican-social is compatible with `Pelican`_ 3.2+ and Python 2.7.
+
+Support for Python 3 will come in future releases.
 
 Installation
 ------------
@@ -108,13 +116,13 @@ to `github`_ profiles, repositories and issues/pull-requests
 
 The following form are accepted:
 
-===================  =============================
-      Target             Expected target form
-===================  =============================
+===================  ==============================
+      Target              Expected target form
+===================  ==============================
 profile              ``username``
 repository           ``username/repository``
 issue/pull-request   ``username/repository#issue``
-===================  =============================
+===================  ==============================
 
 
 **Exemple:**
@@ -141,11 +149,10 @@ will result in:
     <a href="https://github.com/username/repository/issues/2">Issue #2</a>
 
 
-
 Facebook
 ~~~~~~~~
 
-You can use both ``:facebook:`` and ``:fb:`` directives to link to a `Facebook`_,
+You can use both ``:facebook:`` and ``:fb:`` directives to link to a `Facebook`_ profile,
 they are equivalent.
 
 
@@ -155,6 +162,7 @@ they are equivalent.
 
     :facebook:`User <username>`
     :facebook:`username`
+
 
 will result in:
 
