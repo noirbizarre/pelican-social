@@ -16,6 +16,7 @@ Directives
 from __future__ import unicode_literals
 
 import re
+import six
 
 from docutils import nodes
 from docutils.parsers.rst import roles
@@ -100,9 +101,16 @@ def depart_SocialNode(self, node):
     self.body.append(node.endtag())
 
 
+def as_method(func):
+    if six.PY3:
+        return MethodType(func, PelicanHTMLTranslator)
+    else:
+        return MethodType(func, None, PelicanHTMLTranslator)
+
+
 def register():
     for role in NETWORKS.keys():
         roles.register_canonical_role(role, social_role)
 
-    PelicanHTMLTranslator.visit_SocialNode = MethodType(visit_SocialNode, None, PelicanHTMLTranslator)
-    PelicanHTMLTranslator.depart_SocialNode = MethodType(depart_SocialNode, None, PelicanHTMLTranslator)
+    PelicanHTMLTranslator.visit_SocialNode = as_method(visit_SocialNode)
+    PelicanHTMLTranslator.depart_SocialNode = as_method(depart_SocialNode)
