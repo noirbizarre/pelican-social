@@ -1,8 +1,8 @@
 Changelog
 =========
 
-Current
--------
+0.1 (2013-06-20)
+----------------
 
 - Initial implementation allowing to link to:
     - Facebook profiles
