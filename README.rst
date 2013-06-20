@@ -62,7 +62,7 @@ Twitter
 You can use both ``:twitter:`` and ``:tw:`` directives to link to a `Twitter`_ profile,
 they are equivalent.
 Using an ``@`` in username will only change the displayed username
-if a custom display is ot specified.
+if a custom display is not specified.
 
 
 **Exemple:**
