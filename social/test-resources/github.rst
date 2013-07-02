@@ -1,10 +1,10 @@
 Github
 ######
 
-:github:`username`
+:github:`username.me`
 
 :github:`User <username>`
 
-:gh:`username`
+:gh:`username-me`
 
-:gh:`User <username>`
+:gh:`User <username_me>`

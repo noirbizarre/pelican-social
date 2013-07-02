@@ -26,7 +26,7 @@ from types import MethodType
 
 RE_DISPLAY = re.compile(r'^(?P<display>.+?)\s*\<(?P<target>.+)\>$')
 
-RE_GITHUB = re.compile(r'^(?P<username>[\w-]+)(?:/(?P<repository>[\w-]+)(?:#(?P<issue>\d+))?)?$')
+RE_GITHUB = re.compile(r'^(?P<username>[\w.-]+)(?:/(?P<repository>[\w.-]+)(?:#(?P<issue>\d+))?)?$')
 
 # Each social network directive should appears here.
 # If no custom processor is defined, an URL should be associated.

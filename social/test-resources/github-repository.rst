@@ -1,9 +1,9 @@
 Github
 ######
 
-:github:`username/repository`
+:github:`username.me/repository.js`
 
-:github:`Repository <username/repository>`
+:github:`Repository <username-me/repository-js>`
 
 :gh:`username/repository`
 

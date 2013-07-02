@@ -58,46 +58,46 @@ class TestSocial(unittest.TestCase):
     def test_github_regex_user(self):
         from social.plugin import RE_GITHUB
 
-        match = RE_GITHUB.match('username')
+        match = RE_GITHUB.match('username.me')
 
         self.assertIsNotNone(match)
-        self.assertEqual(match.group('username'), 'username')
+        self.assertEqual(match.group('username'), 'username.me')
         self.assertIsNone(match.group('repository'))
         self.assertIsNone(match.group('issue'))
 
     def test_github_regex_issue(self):
         from social.plugin import RE_GITHUB
 
-        match = RE_GITHUB.match('username/repository')
+        match = RE_GITHUB.match('username.me/repository-js')
 
         self.assertIsNotNone(match)
-        self.assertEqual(match.group('username'), 'username')
-        self.assertEqual(match.group('repository'), 'repository')
+        self.assertEqual(match.group('username'), 'username.me')
+        self.assertEqual(match.group('repository'), 'repository-js')
         self.assertIsNone(match.group('issue'))
 
     def test_github_regex_issue(self):
         from social.plugin import RE_GITHUB
 
-        match = RE_GITHUB.match('username/repository#21')
+        match = RE_GITHUB.match('username.me/repository-js#21')
 
         self.assertIsNotNone(match)
-        self.assertEqual(match.group('username'), 'username')
-        self.assertEqual(match.group('repository'), 'repository')
+        self.assertEqual(match.group('username'), 'username.me')
+        self.assertEqual(match.group('repository'), 'repository-js')
         self.assertEqual(match.group('issue'), '21')
 
     def test_github(self):
         expected = (
-            '<a href="https://github.com/username">username</a>',
+            '<a href="https://github.com/username.me">username.me</a>',
             '<a href="https://github.com/username">User</a>',
-            '<a href="https://github.com/username">username</a>',
-            '<a href="https://github.com/username">User</a>',
+            '<a href="https://github.com/username-me">username-me</a>',
+            '<a href="https://github.com/username_me">User</a>',
         )
         self.assert_rst_equal('github.rst', expected)
 
     def test_github_repository(self):
         expected = (
-            '<a href="https://github.com/username/repository">repository</a>',
-            '<a href="https://github.com/username/repository">Repository</a>',
+            '<a href="https://github.com/username.me/repository.js">repository.js</a>',
+            '<a href="https://github.com/username-me/repository-js">Repository</a>',
             '<a href="https://github.com/username/repository">repository</a>',
             '<a href="https://github.com/username/repository">Repository</a>',
         )
@@ -105,8 +105,8 @@ class TestSocial(unittest.TestCase):
 
     def test_github_issue(self):
         expected = (
-            '<a href="https://github.com/username/repository/issues/2">#2</a>',
-            '<a href="https://github.com/username/repository/issues/2">Issue #2</a>',
+            '<a href="https://github.com/username.me/repository.js/issues/2">#2</a>',
+            '<a href="https://github.com/username-me/repository-js/issues/2">Issue #2</a>',
             '<a href="https://github.com/username/repository/issues/2">#2</a>',
             '<a href="https://github.com/username/repository/issues/2">Issue #2</a>',
         )

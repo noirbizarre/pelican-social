@@ -4,7 +4,7 @@ Changelog
 Current
 -------
 
-- nothing yet
+- Handle dot and dashes in Github usernames and repository names
 
 
 0.1 (2013-06-20)
