@@ -1,8 +1,8 @@
 Changelog
 =========
 
-Current
--------
+0.1.1 (2013-07-02)
+------------------
 
 - Handle dot and dashes in Github usernames and repository names
 
