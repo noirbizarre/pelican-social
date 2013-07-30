@@ -65,7 +65,7 @@ class TestSocial(unittest.TestCase):
         self.assertIsNone(match.group('repository'))
         self.assertIsNone(match.group('issue'))
 
-    def test_github_regex_issue(self):
+    def test_github_regex_repository(self):
         from social.plugin import RE_GITHUB
 
         match = RE_GITHUB.match('username.me/repository-js')
