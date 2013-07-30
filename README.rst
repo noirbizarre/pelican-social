@@ -3,6 +3,12 @@ Social plugin for Pelican
 
 .. image:: https://secure.travis-ci.org/noirbizarre/pelican-social.png
    :target: http://travis-ci.org/noirbizarre/pelican-social
+.. image:: https://coveralls.io/repos/noirbizarre/pelican-social/badge.png?branch=master
+    :target: https://coveralls.io/r/noirbizarre/pelican-social
+.. image:: https://pypip.in/v/pelican-social/badge.png
+    :target: https://crate.io/packages/pelican-social
+.. image:: https://pypip.in/d/pelican-social/badge.png
+    :target: https://crate.io/packages/pelican-social
 
 Social directives for `Pelican`_ static blog generator.
 
