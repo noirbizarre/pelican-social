@@ -1,8 +1,8 @@
 Changelog
 =========
 
-Current
--------
+0.2.0 (2017-02-02)
+------------------
 
 - Support for Pelican 3.7+ and Python 3.3+
 - Drop support for Python 3.2

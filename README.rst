@@ -1,10 +1,10 @@
 Social plugin for Pelican
 =========================
 
-.. image:: https://secure.travis-ci.org/noirbizarre/pelican-social.svg?branch=master
+.. image:: https://secure.travis-ci.org/noirbizarre/pelican-social.svg?tag=0.2.0
    :target: https://travis-ci.org/noirbizarre/pelican-social
-.. image:: https://coveralls.io/repos/noirbizarre/pelican-social/badge.svg?branch=master
-    :target: https://coveralls.io/r/noirbizarre/pelican-social?branch=master
+.. image:: https://coveralls.io/repos/noirbizarre/pelican-social/badge.svg?tag=0.2.0
+    :target: https://coveralls.io/r/noirbizarre/pelican-social?tag=0.2.0
 .. image:: https://img.shields.io/pypi/l/pelican-social.svg
     :target: https://pypi.python.org/pypi/pelican-social
 .. image:: https://img.shields.io/pypi/pyversions/pelican-social.svg
