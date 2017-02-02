@@ -6,7 +6,8 @@ import unittest
 
 from os.path import dirname, join
 
-from pelican import readers
+from pelican.readers import Readers
+from pelican.settings import DEFAULT_CONFIG
 
 
 RESOURCES_PATH = join(dirname(__file__), 'test-resources')
@@ -25,9 +26,8 @@ class TestSocial(unittest.TestCase):
         social.register()
 
     def assert_rst_equal(self, rstfile, expectations):
-        filename = join(RESOURCES_PATH, rstfile)
-        content, _ = readers.read_file(filename)
-        content = content.strip().replace('\n', '')
+        reader = Readers(DEFAULT_CONFIG)
+        content = reader.read_file(base_path=RESOURCES_PATH, path=rstfile).content
         extracted_parts = RE_EXTRACT.findall(content)
         self.assertEqual(len(extracted_parts), len(expectations))
         for expected, extracted in zip(expectations, extracted_parts):

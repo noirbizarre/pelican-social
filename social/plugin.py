@@ -21,7 +21,6 @@ import six
 from docutils import nodes
 from docutils.parsers.rst import roles
 from pelican.readers import PelicanHTMLTranslator
-from types import MethodType
 
 
 RE_DISPLAY = re.compile(r'^(?P<display>.+?)\s*\<(?P<target>.+)\>$')
@@ -102,10 +101,7 @@ def depart_SocialNode(self, node):
 
 
 def as_method(func):
-    if six.PY3:
-        return MethodType(func, PelicanHTMLTranslator)
-    else:
-        return MethodType(func, None, PelicanHTMLTranslator)
+    return six.create_unbound_method(func, PelicanHTMLTranslator)
 
 
 def register():
